@@ -1,0 +1,15 @@
+.cardHousing {
+  display: flex;
+
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
+  background-size: cover;
+  h4 {
+    align-self: flex-end;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+  }
+}

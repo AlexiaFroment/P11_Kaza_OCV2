@@ -1,0 +1,38 @@
+@import "@/style/style.scss";
+.housingDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 50px;
+}
+.housingInfos {
+  h2 {
+    color: $primary-color;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  h4 {
+    font-style: 1.125rem;
+    font-weight: 500;
+  }
+}
+.ownerInfos {
+  color: $primary-color;
+  height: 64px;
+  width: 167px;
+  display: flex;
+  align-items: center;
+  span {
+    text-align: end;
+    padding-right: 10px;
+  }
+  img {
+    height: 64px;
+    border-radius: 50%;
+  }
+}
+.dropdownSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 40px;
+}

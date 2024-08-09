@@ -1,0 +1,15 @@
+.cardDisplay {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  background: #f6f6f6;
+  margin: 30px 50px;
+  padding: 30px;
+  border-radius: 20px;
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-style: 1.125rem;
+  }
+}
