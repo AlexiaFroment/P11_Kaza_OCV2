@@ -1,0 +1,25 @@
+// Template Base
+@import "@/assets/style/scss/template/template.scss";
+
+// Utils
+@import "@/assets/style/scss/utils/_variables.scss";
+@import "@/assets/style/scss/utils/fonts.scss";
+@import "@/assets/style/scss/utils/keyframes.scss";
+@import "@/assets/style/scss/utils/mixins.scss";
+@import "@/assets/style/scss/utils/placeholders.scss";
+
+// Layouts
+@import "@/assets/style/scss/layout/header.scss";
+@import "@/assets/style/scss/layout/footer.scss";
+
+// Components
+@import "@/assets/style/scss/components/card.scss";
+@import "@/assets/style/scss/components/banner.scss";
+@import "@/assets/style/scss/components/dropdown.scss";
+@import "@/assets/style/scss/components/hero.scss";
+
+// Pages
+@import "@/assets/style/scss/pages/about.scss";
+@import "@/assets/style/scss/pages/home.scss";
+@import "@/assets/style/scss/pages/logement.scss";
+@import "@/assets/style/scss/pages/error404.scss";

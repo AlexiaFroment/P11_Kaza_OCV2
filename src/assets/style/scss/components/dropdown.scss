@@ -1,5 +1,3 @@
-@import "@/style/style.scss";
-
 .dropdown {
   flex: 1;
   margin: 0 10px;
@@ -10,15 +8,29 @@
     background-color: $primary-color;
     color: #fff;
     font-size: 1.125rem;
-    font-weight: 700;
+    font-weight: 500;
     border-radius: 5px;
     border: none;
     padding: 10px 20px;
     width: 100%;
     cursor: pointer;
-    img {
+    .icon {
+      display: inline-block;
       height: 20px;
       margin-left: 10px;
+      transition: transform 0.3s ease-in-out;
+      &.rotate {
+        animation: rotateIcon 0.3s forwards;
+      }
+
+      &.reverse-rotate {
+        animation: reverseRotateIcon 0.3s forwards;
+      }
     }
+  }
+
+  .dropdownContent {
+    padding: 10px;
+    line-height: 1.4;
   }
 }

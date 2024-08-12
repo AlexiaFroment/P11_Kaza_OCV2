@@ -1,0 +1,39 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 40px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 1;
+  }
+  .overlay_hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-color: $color-black;
+    opacity: 0.6;
+    // background: $degraderHome;
+    border-radius: 20px;
+    z-index: 2;
+  }
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: 700;
+    z-index: 3;
+  }
+}

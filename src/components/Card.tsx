@@ -1,15 +1,18 @@
 import { HousingData } from "@/modules/Types"
-import "@/components/Card.scss"
+import { NavLink } from "react-router-dom"
 
 type cardProps = {
   housing: HousingData
 }
 
 export const Card: React.FC<cardProps> = ({ housing }) => {
-  const bgImg = { backgroundImage: `url(${housing.cover})` }
   return (
-    <div className='cardHousing' style={bgImg}>
-      <h4>{housing.title}</h4>
-    </div>
+    <li className='Card'>
+      <NavLink key={housing.id} to={`/logement/${housing.id}`}>
+        <img src={housing.cover} />
+        <div className='overlay'></div>
+        <h2>{housing.title}</h2>
+      </NavLink>
+    </li>
   )
 }

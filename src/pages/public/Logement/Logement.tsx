@@ -1,11 +1,9 @@
 import { useParams } from "react-router-dom"
-import data from "@/assets/data/data.json"
-import { HousingData } from "@/modules/Types"
-
 import { Dropdown } from "@/components/Dropdown"
+import { HousingData } from "@/modules/Types"
+import data from "@/assets/data/data.json"
 
-import "@/pages/public/logement.scss"
-export const Logement: React.FC = () => {
+const Logement: React.FC = () => {
   const { id } = useParams<{ id: string }>()
   const housing = data.find((item: HousingData) => item.id === id)
 
@@ -13,7 +11,7 @@ export const Logement: React.FC = () => {
     return <div>Logement introuvable</div>
   }
   return (
-    <>
+    <section className='sectionLogement'>
       <div className='housingDetails'>
         <div className='housingInfos'>
           <h2>{housing.title}</h2>
@@ -24,10 +22,12 @@ export const Logement: React.FC = () => {
           <img src={housing.host.picture} alt={housing.host.name} />
         </div>
       </div>
-      <div className='dropdownSection'>
-        <Dropdown title='Description' width='70%' />
-        <Dropdown title='Équipements' width='70%' />
+      <div className='dropdownLogement'>
+        <Dropdown title='Description' content={housing.description} />
+        <Dropdown title='Équipements' content={housing.equipments} />
       </div>
-    </>
+    </section>
   )
 }
+
+export default Logement

@@ -1,0 +1,48 @@
+.Card {
+  position: relative;
+  min-height: 340px;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  & .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $color-black;
+    background: $degraderHome;
+    border-radius: 10px;
+  }
+
+  & h2 {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: $color-white;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  @media only screen and (max-width: $tablette) {
+  }
+
+  @media only screen and (max-width: $mobile) {
+  }
+}
+
+.Card:hover {
+  background: $degraderHome;
+  cursor: pointer;
+  h2 {
+    font-weight: 700;
+  }
+}

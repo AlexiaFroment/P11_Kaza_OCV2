@@ -6,7 +6,9 @@ export const MainLayout: React.FC = () => {
   return (
     <>
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </>
   )

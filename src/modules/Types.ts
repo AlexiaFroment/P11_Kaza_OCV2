@@ -1,6 +1,11 @@
+export interface HeroProps {
+  img: string
+  title?: string
+}
 export interface DropdownProps {
   title: string
-  width?: string
+  content: string | string[]
+  // width?: string
 }
 
 export interface HousingData {

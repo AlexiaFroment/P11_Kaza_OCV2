@@ -1,0 +1,37 @@
+.sectionHome {
+  margin: 40px;
+  .cardDisplay {
+    @extend %gridcenter;
+    @include gridtemplatecolomns(3);
+    gap: 30px 30px;
+    background-color: $color-backgroundHome;
+    padding: 40px 40px;
+    // margin: 40px;
+    // height: 100%;
+    border-radius: 25px;
+
+    @media only screen and (max-width: $tablette) {
+      @include gridtemplatecolomns(2);
+    }
+
+    @media only screen and (max-width: $mobile) {
+      @include gridtemplatecolomns(1);
+    }
+  }
+}
+
+//    .cardDisplay {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+//     gap: 30px;
+//     justify-items: center;
+//     background: #f6f6f6;
+//     margin: 30px 50px;
+//     padding: 30px;
+//     border-radius: 20px;
+//      a {
+//       text-decoration: none;
+//       color: #fff;
+//       font-style: 1.125rem;
+//     }
+//   }
