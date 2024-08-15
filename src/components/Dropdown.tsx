@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { DropdownProps } from "@/modules/Types"
-import arrow from "@/assets/img/arrow_dropdown.png"
+import Arrow from "@/assets/img/Arrow_dropdown.png"
 
 export const Dropdown: React.FC<DropdownProps> = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,7 +10,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ title, content }) => {
       <button onClick={toggleDropdown} className='dropdownBtn'>
         {title}
         <img
-          src={arrow}
+          src={Arrow}
           alt='arrow'
           className={`icon ${isOpen ? "rotate" : "reverse-rotate"}`}
         />

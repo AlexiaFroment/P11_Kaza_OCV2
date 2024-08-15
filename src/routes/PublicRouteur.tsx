@@ -6,8 +6,9 @@ import { Home, About, Logement, Error404 } from "@/pages/public/index"
 export const PublicRouteur: React.FC = () => {
   return (
     <Routes>
-      <Route path='/' element={<MainLayout />}>
+      <Route element={<MainLayout />}>
         children: [
+        <Route index element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/logement/:id' element={<Logement />} />

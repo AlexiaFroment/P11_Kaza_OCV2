@@ -32,6 +32,12 @@
       }
     }
   }
+  .tagsAndRatingDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+  }
   .dropdownLogement {
     display: flex;
     justify-content: space-between;
