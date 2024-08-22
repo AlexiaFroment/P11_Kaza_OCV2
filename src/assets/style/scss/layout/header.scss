@@ -16,6 +16,10 @@
       a {
         text-decoration: none;
       }
+      .active_link {
+        text-decoration: underline;
+        text-underline-offset: 1mm;
+      }
     }
   }
 }

@@ -23,7 +23,7 @@
     border-radius: 10px;
   }
 
-  & h2 {
+  & .title_card {
     position: absolute;
     left: 10px;
     bottom: 10px;
@@ -40,9 +40,5 @@
 }
 
 .Card:hover {
-  background: $degraderHome;
   cursor: pointer;
-  h2 {
-    font-weight: 700;
-  }
 }

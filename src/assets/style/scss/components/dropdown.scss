@@ -30,7 +30,10 @@
   }
 
   .dropdownContent {
-    padding: 10px;
+    padding: 20px;
     line-height: 1.4;
+    li {
+      line-height: 1.8;
+    }
   }
 }

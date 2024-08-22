@@ -1,12 +1,10 @@
-import { HousingData } from "@/modules/Types"
-
 type tagProps = {
-  housing: HousingData
+  tags: string[]
 }
-export const Tag: React.FC<tagProps> = ({ housing }) => {
+export const Tag: React.FC<tagProps> = ({ tags }) => {
   return (
     <div className='tags'>
-      {housing.tags.map((tag, index) => (
+      {tags.map((tag, index) => (
         <span key={index} className='tag'>
           {tag}
         </span>

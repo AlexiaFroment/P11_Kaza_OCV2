@@ -10,10 +10,18 @@ export const Header: React.FC = () => {
         </NavLink>
         <ul>
           <li>
-            <NavLink to='/home'>Accueil</NavLink>
+            <NavLink
+              to='/home'
+              className={({ isActive }) => (isActive ? "active_link" : "")}>
+              Accueil
+            </NavLink>
           </li>
           <li>
-            <NavLink to='/about'>A propos</NavLink>
+            <NavLink
+              to='/about'
+              className={({ isActive }) => (isActive ? "active_link" : "")}>
+              A propos
+            </NavLink>
           </li>
         </ul>
       </nav>

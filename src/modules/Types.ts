@@ -5,6 +5,7 @@ export interface HeroProps {
 export interface DropdownProps {
   title: string
   content: string | string[]
+  list: boolean
   // width?: string
 }
 

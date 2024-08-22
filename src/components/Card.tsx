@@ -1,5 +1,6 @@
 import { HousingData } from "@/modules/Types"
 import { NavLink } from "react-router-dom"
+import { Title } from "@/components/Title"
 
 type cardProps = {
   housing: HousingData
@@ -11,7 +12,7 @@ export const Card: React.FC<cardProps> = ({ housing }) => {
       <NavLink key={housing.id} to={`/logement/${housing.id}`}>
         <img src={housing.cover} />
         <div className='overlay'></div>
-        <h2>{housing.title}</h2>
+        <Title title={housing.title} className='title_card' />
       </NavLink>
     </li>
   )
