@@ -2,7 +2,7 @@ import { useState } from "react"
 import { DropdownProps } from "@/modules/Types"
 import Arrow from "@/assets/img/Arrow_dropdown.png"
 
-export const Dropdown: React.FC<DropdownProps> = ({ title, content, list }) => {
+export const Dropdown: React.FC<DropdownProps> = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggleDropdown = () => setIsOpen(!isOpen)
   return (
@@ -18,16 +18,14 @@ export const Dropdown: React.FC<DropdownProps> = ({ title, content, list }) => {
 
       {isOpen && (
         <div className='dropdownContent'>
-          {!list ? (
-            <p>{content}</p>
-          ) : (
+          {Array.isArray(content) ? (
             <ul>
               {content.map((item, index) => (
-                <li key={index}>
-                  <p>{item}</p>
-                </li>
+                <li key={index}>{item}</li>
               ))}
             </ul>
+          ) : (
+            <p>{content}</p>
           )}
         </div>
       )}

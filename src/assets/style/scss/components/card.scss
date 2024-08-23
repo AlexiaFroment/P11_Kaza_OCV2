@@ -1,9 +1,21 @@
 .Card {
   position: relative;
-  min-height: 340px;
+  max-height: 340px;
+  width: 100%;
   height: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 10px;
+
+  @media only screen and (max-width: $mobile) {
+    max-height: 310px;
+  }
+
+  & a {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
 
   & img {
     height: 100%;
@@ -30,15 +42,16 @@
     color: $color-white;
     font-size: 1.125rem;
     font-weight: 500;
+    @media only screen and (max-width: $tablette) {
+      font-size: 1.12rem;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      font-size: 1rem;
+    }
   }
 
-  @media only screen and (max-width: $tablette) {
+  &:hover {
+    cursor: pointer;
   }
-
-  @media only screen and (max-width: $mobile) {
-  }
-}
-
-.Card:hover {
-  cursor: pointer;
 }

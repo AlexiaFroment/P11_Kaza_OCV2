@@ -1,34 +1,50 @@
 .carrousel {
   position: relative;
-  height: 560px;
-  margin: 0 50px;
-  //   border-radius: 20px;
-  .pictures {
+  height: 20em;
+  width: 90%;
+  margin: auto;
+
+  @media only screen and (max-width: $tablette) {
+    height: 15em;
+  }
+  @media only screen and (max-width: $mobile) {
+    height: 10em;
+  }
+
+  & .pictures {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 20px;
   }
-  .carrousel_navigation {
+
+  & .carrousel_navigation {
     position: absolute;
     width: 100%;
-    top: 50%;
-    bottom: 50%;
+    height: 100%;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
-    img {
+    padding: 0px 20px;
+
+    & img {
       width: 60px;
       cursor: pointer;
+
+      @media only screen and (max-width: $mobile) {
+        width: 30px;
+      }
     }
   }
-  .carrousel_pagination {
+  & .carrousel_pagination {
+    display: flex;
+    justify-content: center;
     position: absolute;
+    width: 100%;
+    left: 0;
     bottom: 20px;
-    right: 50%;
-    left: 50%;
     color: white;
     font-size: 1.125rem;
   }

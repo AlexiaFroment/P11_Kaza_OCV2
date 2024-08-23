@@ -15,7 +15,6 @@ const About: React.FC = () => {
             key={item.id}
             title={item.title}
             content={item.description}
-            list={false}
           />
         ))}
       </div>

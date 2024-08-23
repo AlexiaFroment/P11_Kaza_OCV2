@@ -13,15 +13,14 @@ const Logement: React.FC = () => {
   const { id } = useParams<{ id: string | undefined }>()
   const [housing, setHousing] = useState<HousingData | undefined>(undefined)
   const navigate = useNavigate()
-  // const housing = data.find((item: HousingData) => item.id === id)
 
   useEffect(() => {
-    const getinfo = async () => {
-      if (!id) {
-        navigate("/404")
-        return
-      }
+    if (!id) {
+      navigate("/404")
+      return
+    }
 
+    const fetchData = async () => {
       try {
         const data = await logementservice.GetOneLogement(id)
         if (data) {
@@ -34,7 +33,7 @@ const Logement: React.FC = () => {
       }
     }
 
-    getinfo()
+    fetchData()
   }, [id, navigate])
 
   if (!housing) {
@@ -68,16 +67,8 @@ const Logement: React.FC = () => {
         </div>
       </div>
       <div className='dropdownLogement'>
-        <Dropdown
-          title='Description'
-          content={housing.description}
-          list={false}
-        />
-        <Dropdown
-          title='Équipements'
-          content={housing.equipments}
-          list={true}
-        />
+        <Dropdown title='Description' content={housing.description} />
+        <Dropdown title='Équipements' content={housing.equipments} />
       </div>
     </section>
   )

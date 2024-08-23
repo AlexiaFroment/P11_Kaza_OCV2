@@ -1,22 +1,47 @@
 .header {
-  nav {
+  & nav {
     display: flex;
     align-items: center;
-    margin: 30px 50px;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+    }
   }
-  img {
+  & img {
     width: 200px;
+
+    @media only screen and (max-width: $tablette) {
+      width: 165px;
+    }
+    @media only screen and (max-width: $mobile) {
+      width: 190px;
+    }
   }
-  ul {
+  & ul {
     display: flex;
-    margin-left: auto;
     list-style: none;
-    li {
-      margin: 0 20px;
-      a {
+
+    & li {
+      padding: 0 20px;
+
+      & a {
         text-decoration: none;
+
+        @media only screen and (max-width: $tablette) {
+          font-size: 1rem;
+          white-space: nowrap;
+        }
+        @media only screen and (max-width: $mobile) {
+          font-size: 0.8rem;
+        }
       }
-      .active_link {
+      & .active_link {
         text-decoration: underline;
         text-underline-offset: 1mm;
       }

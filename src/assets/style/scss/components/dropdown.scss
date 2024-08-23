@@ -1,7 +1,7 @@
 .dropdown {
-  flex: 1;
-  margin: 0 10px;
-  button {
+  padding: 0 0px 20px 0px;
+
+  & button {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,11 +14,13 @@
     padding: 10px 20px;
     width: 100%;
     cursor: pointer;
-    .icon {
+
+    & .icon {
       display: inline-block;
       height: 20px;
       margin-left: 10px;
       transition: transform 0.3s ease-in-out;
+
       &.rotate {
         animation: rotateIcon 0.3s forwards;
       }
@@ -29,10 +31,12 @@
     }
   }
 
-  .dropdownContent {
+  & .dropdownContent {
     padding: 20px;
     line-height: 1.4;
-    li {
+    background-color: $color-backgroundHome;
+    border-radius: 0px 0 20px 20px;
+    & li {
       line-height: 1.8;
     }
   }
