@@ -1,0 +1,16 @@
+.owner {
+  display: flex;
+  align-items: center;
+  width: 167px;
+  height: 64px;
+  padding-bottom: 25px;
+  color: $primary-color;
+  p {
+    text-align: end;
+    padding-right: 10px;
+  }
+  img {
+    height: 64px;
+    border-radius: 50%;
+  }
+}

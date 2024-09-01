@@ -12,7 +12,7 @@ export const Card: React.FC<cardProps> = ({ housing }) => {
       <NavLink key={housing.id} to={`/logement/${housing.id}`}>
         <img src={housing.cover} />
         <div className='overlay'></div>
-        <Title title={housing.title} className='title_card' />
+        <Title title={housing.title} />
       </NavLink>
     </li>
   )

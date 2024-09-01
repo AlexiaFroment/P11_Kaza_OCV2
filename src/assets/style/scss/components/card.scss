@@ -35,13 +35,14 @@
     border-radius: 10px;
   }
 
-  & .title_card {
+  & h2 {
     position: absolute;
     left: 10px;
     bottom: 10px;
     color: $color-white;
     font-size: 1.125rem;
     font-weight: 500;
+    padding: 0 5px 0 0;
     @media only screen and (max-width: $tablette) {
       font-size: 1.12rem;
     }

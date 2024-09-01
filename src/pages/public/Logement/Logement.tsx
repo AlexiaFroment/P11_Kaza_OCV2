@@ -49,23 +49,18 @@ const Logement: React.FC = () => {
         <div className='housingInfos'>
           <Title
             title={housing.title}
-            className='title_housing'
             showLocation={true}
             children={housing.location}
           />
-        </div>
-        <div className='ownerInfos'>
-          <Owner name={housing.host.name} picture={housing.host.picture} />
-        </div>
-      </div>
-      <div className='tagsAndRatingDetails'>
-        <div className='tagsSection'>
+
           <Tag tags={housing.tags} />
         </div>
-        <div className='ratingSection'>
+        <div className='ownerAndRating'>
+          <Owner name={housing.host.name} picture={housing.host.picture} />
           <Rating rating={housing.rating} />
         </div>
       </div>
+
       <div className='dropdownLogement'>
         <Dropdown title='Description' content={housing.description} />
         <Dropdown title='Équipements' content={housing.equipments} />

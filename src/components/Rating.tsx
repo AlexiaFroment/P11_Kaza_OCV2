@@ -14,5 +14,5 @@ export const Rating: React.FC<ratingProps> = ({ rating }) => {
     />
   ))
 
-  return <div>{stars}</div>
+  return <div className='rating'>{stars}</div>
 }
