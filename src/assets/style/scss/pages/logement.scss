@@ -12,7 +12,9 @@
     }
 
     & .housingInfos {
-      width: 100%;
+      @media only screen and (max-width: $mobile) {
+        width: 100%;
+      }
       h2 {
         color: $primary-color;
         font-size: 2rem;
