@@ -35,7 +35,6 @@
 
         @media only screen and (max-width: $tablette) {
           font-size: 1rem;
-          white-space: nowrap;
         }
         @media only screen and (max-width: $mobile) {
           font-size: 0.8rem;
@@ -43,7 +42,7 @@
       }
       & .active_link {
         text-decoration: underline;
-        text-underline-offset: 1mm;
+        text-underline-offset: 0.7mm;
       }
     }
   }
